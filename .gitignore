@@ -1,0 +1,90 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PyTorch / model weights (large)
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Datasets (large, download separately)
+**/datasets/
+**/data/
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Experiment artifacts (per-project .gitignore handles details)
+**/work_dirs/
+
+# MMDetection / MMSegmentation (cloned, install via pip or submodule)
+minecraft_fcos_yolo/mmdetection/
+segmentation_work/mmsegmentation/
+
+# Course sprints (not part of portfolio)
+sprint_1/
+sprint_2/
+
+# Logs
+*.log
+*.log.json
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Env vars
+.env
+.env.local
+.env.*.local
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+
+# Temp
+*.tmp
+*.temp
+temp/
+tmp/

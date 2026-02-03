@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+
+# Virtual environment
+.env/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights (large)
+*.pth
+*.pt
+*.ckpt
+yolov8x.pt
+sam2*.pt
+
+# Datasets (large)
+datasets/
+
+# Experiments output
+experiments/
+
+# MMSegmentation framework (install via pip)
+mmsegmentation/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

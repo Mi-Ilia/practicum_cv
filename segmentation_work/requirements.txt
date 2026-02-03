@@ -1,0 +1,21 @@
+# MMSegmentation (должен быть установлен из mmsegmentation/)
+# См. mmsegmentation/requirements.txt
+
+# ClearML для управления экспериментами
+clearml>=1.13.0
+
+# Основные зависимости (обычно уже установлены с mmsegmentation)
+torch>=1.13.0
+torchvision>=0.14.0
+mmengine>=0.8.0
+mmcv>=2.0.0
+
+# Визуализация и работа с данными
+matplotlib>=3.5.0
+numpy>=1.21.0
+opencv-python>=4.5.0
+pillow>=9.0.0
+
+# Утилиты
+tqdm>=4.64.0
+pyyaml>=6.0

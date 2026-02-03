@@ -1,0 +1,106 @@
+# Python process files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+.env/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Machine Learning Frameworks (PyTorch / Weights)
+*.pth
+*.pt
+*.ckpt
+
+# Datasets & Archives
+data/
+dataset/
+datasets/
+*.zip
+*.tar
+*.tar.gz
+
+# External Libraries & Frameworks
+mmdetection/
+mmsegmentation/
+
+# Assets & Fonts
+ttf/
+
+# Annotations (Large files)
+# annotations/
+
+# MMDetection & MMSegmentation Output
+work_dirs/
+*.log
+*.log.json
+
+# Project Artifacts (README uses: image.jpg, example_det.jpg, artifacts/metrics/metrics_comparison.csv)
+artifacts/videos/
+artifacts/inference/
+artifacts/fcos/
+artifacts/yolo/
+artifacts/*.png
+artifacts/*.jpg
+artifacts/*.jpeg
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logging
+logs/
+*.log
+
+# Environment Variables & Secrets
+.env
+.env.local
+
+# Coverage & Testing
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
+
+# Type Checking (MyPy)
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Profiling
+*.prof
+
+# Temporary Scripts
+fix_*.py
+temp_*.py
