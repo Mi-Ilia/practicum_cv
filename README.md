@@ -10,7 +10,7 @@ Welcome to my Computer Vision portfolio. This repository centralizes research pr
 | :--- | :--- | :--- | :--- |
 | **[Minecraft Object Detection](./minecraft_fcos_yolo)** | Object Detection | MMDetection, FCOS, YOLOv8, Roboflow | YOLOv8 delivers ~80% higher FPS, while FCOS keeps Precision +0.21 above YOLO across 17 classes. |
 | **[Semantic Segmentation](./segmentation_work)** | Semantic Segmentation | MMSegmentation, SegFormer-B2, DeepLabV3+, ClearML, SAM2 | SegFormer-B2 beats DeepLabV3+ by **+2.55% mDice** and **+4.44% Dog Dice**, hitting **90.39% mDice** on the test set. |
-| **[Stable Diffusion LoRA](./diffusion_finetuning)** | Generative / Fine-tuning | Diffusers, PEFT (LoRA), Stable Diffusion 1.5, TensorBoard | LoRA fine-tuning of SD 1.5 on **3 images** embeds custom character; best setup: 2000 steps, `guidance_scale=5.0`. |
+| **[Stable Diffusion LoRA](./diffusion_finetuning)** | Generative / Fine-tuning | Diffusers, PEFT (LoRA), Stable Diffusion 1.5, TensorBoard | LoRA fine-tuning of SD 1.5 on **3 images** embeds custom character; Baseline best for fine details; `guidance_scale=5.0` at inference. |
 
 ---
 
@@ -40,7 +40,7 @@ Through these projects, I have demonstrated proficiency in:
 
 ### [3. Stable Diffusion LoRA Fine-tuning (Cheburashka)](./diffusion_finetuning)
 - **Goal**: Personalize SD 1.5 with LoRA on 3 reference images for custom character generation.
-- **Highlights**: Exp 1 (2000 steps) gives best visual quality; `guidance_scale=5.0` reduces artifacts vs default 7.5; Min-SNR weighting critical.
+- **Highlights**: Baseline (1000 steps) yields best fine details; Exp 1 (2000 steps) smoother overall; `guidance_scale=5.0` reduces artifacts vs default 7.5.
 - **Artifacts**: LoRA checkpoints, TensorBoard logs, guidance_scale comparison.
 - [Go to project →](./diffusion_finetuning)
 

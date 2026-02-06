@@ -18,7 +18,7 @@
 
 > TL;DR:  
 > LoRA fine-tuning of SD 1.5 on **3 images** embeds a custom character.  
-> Best setup: **2000 steps**, **Min-SNR weighting** (`snr_gamma=2–5`), **`guidance_scale=5.0`** at inference.  
+> Best setup: **Baseline** (1000 steps) for fine details; **Exp 1** (2000 steps) for smoother overall; **`guidance_scale=5.0`** at inference.  
 > Example outputs: [output_diff5.0.png](./results/output_diff5.0.png) | [output_diff7.5.png](./results/output_diff7.5.png)
 
 </div>
@@ -89,13 +89,13 @@ Testing on fixed prompts and seeds
 
 | Experiment | Configuration | Loss Convergence | Visual Quality | Artifacts |
 |------------|---------------|------------------|----------------|-----------|
-| Baseline | steps=1000, lr=2e-5, snr_gamma=5.0 | Base | Good | Minimal |
-| **Exp 1** | **steps=2000**, lr=2e-5, snr_gamma=5.0 | Improved | **Noticeably better** | Minimal |
+| **Baseline** | steps=1000, lr=2e-5, snr_gamma=5.0 | Base | **Better fine details** | Minimal |
+| Exp 1 | steps=2000, lr=2e-5, snr_gamma=5.0 | Improved | Smoother overall | Minimal |
 | Exp 2 | steps=1000, **lr=1e-5**, snr_gamma=5.0 | Improved | Slight improvement | Moderate |
 | Exp 3a | steps=1000, lr=2e-5, **snr_gamma=2.0** | Improved | Slight improvement | Moderate |
 | Exp 3b | steps=1000, lr=2e-5, **snr_gamma=None** | Worse | Worse | Many |
 
-Bold row indicates the best configuration.
+Baseline yields sharper fine details; Exp 1 improves loss convergence and overall smoothness.
 
 <br>
 
@@ -112,15 +112,17 @@ Bold row indicates the best configuration.
 <tr>
 <td width="50%" align="center">
 
-### ⚡ Best Training Setup
+### ⚡ Training Setup
 
-**Exp 1 — 2000 steps**
-- Best visual quality
-- Recognizable Cheburashka across prompts
-- Min-SNR weighting critical
+**Baseline — best fine details**
+- Sharper textures and facial features
+- Minimal artifacts
+- Recommended for character fidelity
+
+**Exp 1 (2000 steps)** — smoother curves, slightly softer details
 
 **Recommendations:**
-- Use 2000+ steps for 3-image dataset
+- Use **Baseline** for detail-critical outputs
 - Keep `snr_gamma` in 2–5 range
 - Avoid `snr_gamma=None`
 
@@ -179,10 +181,10 @@ results = train_lora(
 </details>
 
 <details>
-<summary><b>🟢 Best Configuration (Exp 1: 2000 steps)</b></summary>
+<summary><b>🟢 Exp 1: 2000 steps</b></summary>
 
 ```python
-# Best config: increase train_steps
+# Alternative: more steps for smoother loss curves
 results = train_lora(
     ...
     train_steps=2000,   # doubled
@@ -194,8 +196,8 @@ results = train_lora(
 ```
 
 **Results:**
-- Noticeably better visual quality
-- Minimal artifacts
+- Smoother loss convergence
+- Overall smoother output; Baseline preserves finer details better
 
 </details>
 
