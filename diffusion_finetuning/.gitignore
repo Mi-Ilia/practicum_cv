@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.env/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LoRA checkpoints (large)
+models/
+
+# Training data (add manually)
+data/
+
+# TensorBoard logs
+experiments/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store

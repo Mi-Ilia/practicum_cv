@@ -47,6 +47,7 @@ segmentation_work/mmsegmentation/
 # Course sprints (not part of portfolio)
 sprint_1/
 sprint_2/
+sprint_3/
 
 # Logs
 *.log
